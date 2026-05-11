@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Privacy Policy — Golden Tempo: Metronome Studio</title>
+  <meta name="description" content="Privacy policy for Golden Tempo: Metronome Studio. No accounts, no servers, no tracking.">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --line: #1f1f1f;
+      --line2: #2a2a2a;
+      --ink: #f0e8dc;
+      --ink2: #b8b0a4;
+      --ink3: #807a70;
+      --amber: #d99c4a;
+      --amber-dim: #2a1f12;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--amber);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      margin: 0 0 12px;
+      color: var(--ink);
+    }
+    .updated {
+      font-size: 13px;
+      color: var(--ink3);
+      margin-bottom: 40px;
+      letter-spacing: 0.3px;
+    }
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 40px 0 12px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+    h2:first-of-type { border-top: none; padding-top: 0; }
+    p {
+      color: var(--ink2);
+      margin: 0 0 14px;
+    }
+    p.lead {
+      font-size: 17px;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0 0 16px;
+    }
+    li {
+      color: var(--ink2);
+      margin-bottom: 8px;
+    }
+    li strong { color: var(--ink); font-weight: 600; }
+    code {
+      background: var(--surface);
+      border: 1px solid var(--line2);
+      padding: 1px 6px;
+      border-radius: 2px;
+      font-family: "SF Mono", "Menlo", "Monaco", monospace;
+      font-size: 13px;
+      color: var(--amber);
+    }
+    a {
+      color: var(--amber);
+      text-decoration: none;
+      border-bottom: 1px solid var(--amber-dim);
+    }
+    a:hover { border-bottom-color: var(--amber); }
+    .short {
+      background: var(--amber-dim);
+      border: 1px solid #4a3520;
+      padding: 18px 20px;
+      margin: 24px 0 32px;
+    }
+    .short h2 {
+      margin: 0 0 8px;
+      padding: 0;
+      border: none;
+      font-size: 11px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+    .short p {
+      margin: 0;
+      color: var(--ink);
+    }
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--ink3);
+    }
+    footer a { color: var(--ink3); border-bottom-color: var(--line2); }
+    footer a:hover { color: var(--ink); border-bottom-color: var(--ink3); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">Golden Tempo: Metronome Studio</div>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated: May 7, 2026</div>
+
+    <p class="lead">Golden Tempo: Metronome Studio ("the app") is built and operated by Seve Barragan ("we", "us"). This policy describes what data the app does and does not collect.</p>
+
+    <div class="short">
+      <h2>Short version</h2>
+      <p>We do not have a server. We do not have user accounts. We do not collect personal information. The app does not transmit your audio, your practice data, or your usage to anyone.</p>
+    </div>
+
+    <h2>What data the app uses on your device</h2>
+    <ul>
+      <li><strong>Microphone audio.</strong> When you start an Analysis session, the app processes microphone audio in real time to measure how tightly your playing aligns with the metronome. The audio is never recorded, transmitted, or stored. It is analyzed in memory and discarded.</li>
+      <li><strong>Bluetooth.</strong> When you enable Conductor Mode, paired Apple Watches communicate tempo and downbeat timing peer-to-peer over Bluetooth Low Energy. No data leaves your devices.</li>
+      <li><strong>Local storage.</strong> Your presets, daily goals, exercise history, and session statistics are stored in <code>UserDefaults</code> on your device only.</li>
+    </ul>
+
+    <h2>Anonymous analytics (when enabled)</h2>
+    <p>The app integrates with TelemetryDeck for anonymous product analytics. When this integration is configured by the developer, the app sends anonymous usage events (e.g. "metronome started", "session saved") to TelemetryDeck. These events:</p>
+    <ul>
+      <li>Are not linked to your identity, Apple ID, or any persistent identifier we control</li>
+      <li>Do not include the contents of your audio, sessions, or presets</li>
+      <li>Do not include your IP address (TelemetryDeck does not retain it)</li>
+    </ul>
+    <p>If you would prefer not to share anonymous analytics, you can disable analytics tracking via your device's settings (Settings &rarr; Privacy &amp; Security &rarr; Tracking) or by contacting us.</p>
+
+    <h2>Purchases</h2>
+    <p>Pro upgrade purchases are processed by Apple via the App Store. We receive only an anonymous receipt identifier confirming the purchase. We do not see your payment method, billing address, or Apple ID.</p>
+
+    <h2>Children</h2>
+    <p>The app is not directed at children under 13. We do not knowingly collect data from children.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>Material changes will be reflected in this document. The "Last updated" date above will change. Substantial changes will be called out in the app's release notes.</p>
+
+    <h2>Contact</h2>
+    <p>Questions, requests, or concerns: <a href="mailto:sevebarr@gmail.com">sevebarr@gmail.com</a></p>
+
+    <footer>
+      &copy; 2026 Seve Barragan. Golden Tempo: Metronome Studio.
+    </footer>
+  </main>
+</body>
+</html>
