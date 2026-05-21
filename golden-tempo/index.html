@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Golden Tempo: Metronome Studio</title>
+  <meta name="description" content="The metronome that grades you. Practice-feedback metronome for iPhone, iPad, and Apple Watch. Mic-based timing analysis, multi-watch Conductor Mode, 21 sound kits.">
+  <meta property="og:title" content="Golden Tempo: Metronome Studio">
+  <meta property="og:description" content="The metronome that grades you. Practice-feedback metronome with mic-based timing analysis.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sevebarr.github.io/golden-tempo/">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --line: #1f1f1f;
+      --line2: #2a2a2a;
+      --ink: #f0e8dc;
+      --ink2: #b8b0a4;
+      --ink3: #807a70;
+      --amber: #d99c4a;
+      --amber-dim: #2a1f12;
+      --amber-glow: #4a3520;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+    }
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--amber);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .hero { padding-bottom: 64px; border-bottom: 1px solid var(--line); }
+    h1 {
+      font-size: 56px;
+      font-weight: 200;
+      letter-spacing: -1.5px;
+      line-height: 1.05;
+      margin: 0 0 20px;
+      color: var(--ink);
+    }
+    h1 .colon { color: var(--amber); }
+    .tagline {
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--ink);
+      margin: 0 0 24px;
+      letter-spacing: -0.3px;
+    }
+    .hero-body {
+      font-size: 17px;
+      color: var(--ink2);
+      max-width: 560px;
+      margin: 0 0 32px;
+    }
+    .cta {
+      display: inline-block;
+      padding: 14px 24px;
+      background: var(--amber-dim);
+      border: 1px solid var(--amber-glow);
+      color: var(--amber);
+      font-size: 12px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    section.bar {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    section.bar:last-of-type { border-bottom: none; }
+    h2 {
+      font-size: 28px;
+      font-weight: 500;
+      letter-spacing: -0.4px;
+      color: var(--ink);
+      margin: 0 0 16px;
+    }
+    section .body {
+      color: var(--ink2);
+      font-size: 16px;
+      margin: 0 0 28px;
+      max-width: 640px;
+    }
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--line2);
+      padding: 18px 20px;
+    }
+    .feature .ftitle {
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--amber);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .feature .fbody {
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .pro-card {
+      background: var(--amber-dim);
+      border: 1px solid var(--amber-glow);
+      padding: 32px;
+      margin-top: 24px;
+    }
+    .pro-card .price {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .pro-card .price-num {
+      font-size: 40px;
+      font-weight: 300;
+      color: var(--amber);
+      letter-spacing: -0.5px;
+    }
+    .pro-card .price-tag {
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+    .pro-card .price-note {
+      color: var(--ink2);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    .pro-card .standard {
+      color: var(--ink3);
+      font-size: 13px;
+      margin-top: 16px;
+    }
+    footer {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13px;
+      color: var(--ink3);
+    }
+    footer a { color: var(--ink2); text-decoration: none; border-bottom: 1px solid var(--line2); }
+    footer a:hover { color: var(--ink); border-bottom-color: var(--ink3); }
+    footer .copy { margin-left: auto; }
+    @media (max-width: 600px) {
+      h1 { font-size: 40px; }
+      .tagline { font-size: 18px; }
+      main { padding: 40px 20px 72px; }
+      .pro-card { padding: 24px; }
+      footer .copy { margin-left: 0; flex-basis: 100%; margin-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Golden Tempo</div>
+      <h1>Metronome<br>Studio</h1>
+      <p class="tagline">The metronome that grades you.</p>
+      <p class="hero-body">Most metronomes only count time. Golden Tempo's mic listens to your playing and grades every beat — to the millisecond. See exactly how tight your timing is, where you drift, and how you trend over weeks of practice.</p>
+      <div class="cta">Coming soon · iPhone, iPad &amp; Apple Watch</div>
+    </section>
+
+    <section class="bar">
+      <h2>Practice with feedback</h2>
+      <p class="body">The only metronome with mic-based timing analysis. Every hit measured to the millisecond.</p>
+      <ul class="features">
+        <li class="feature">
+          <div class="ftitle">Live offset</div>
+          <div class="fbody">Every hit reported early or late, in milliseconds. Hero readout updates as you play.</div>
+        </li>
+        <li class="feature">
+          <div class="ftitle">Dart target</div>
+          <div class="fbody">Concentric-ring scatter of your last 40 hits. Spread tells you where you're inconsistent.</div>
+        </li>
+        <li class="feature">
+          <div class="ftitle">Session stats</div>
+          <div class="fbody">In-pocket %, drift over time, consistency (σ), best streak. Saved every session.</div>
+        </li>
+        <li class="feature">
+          <div class="ftitle">Daily goal &amp; streak</div>
+          <div class="fbody">Set a target. Build the habit. Streaks reset only if you miss a day.</div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="bar">
+      <h2>Best-in-class on Apple Watch</h2>
+      <p class="body">Full watchOS 10 app, not a glorified extension. Built for musicians who practice on the move.</p>
+      <ul class="features">
+        <li class="feature">
+          <div class="ftitle">Always-On runtime</div>
+          <div class="fbody">Keep ticking when the screen dims. No more taps to wake your wrist mid-practice.</div>
+        </li>
+        <li class="feature">
+          <div class="ftitle">Silent haptic pulse</div>
+          <div class="fbody">Feel the click on your wrist. Practice anywhere without speakers.</div>
+        </li>
+        <li class="feature">
+          <div class="ftitle">Edit on the wrist</div>
+          <div class="fbody">Digital Crown for BPM. Tap-cycle accent levels per beat. Full settings on watch.</div>
+        </li>
+        <li class="feature">
+          <div class="ftitle">Conductor Mode</div>
+          <div class="fbody">Sync tempo across multiple Apple Watches over Bluetooth. For drum lines, ensembles, percussion sections.</div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="bar">
+      <h2>The metronome itself</h2>
+      <p class="body">Every musician's checklist, covered.</p>
+      <ul class="features">
+        <li class="feature">
+          <div class="ftitle">21 sound kits</div>
+          <div class="fbody">Digital, wood, metal, drum, and other families. All synthesized at runtime.</div>
+        </li>
+        <li class="feature">
+          <div class="ftitle">Polyrhythms</div>
+          <div class="fbody">Independent secondary voice. Any ratio that locks at the bar boundary.</div>
+        </li>
+        <li class="feature">
+          <div class="ftitle">Per-beat accents</div>
+          <div class="fbody">Accent / medium / low / mute on every beat. Time signatures from 1/2 to 12/16.</div>
+        </li>
+        <li class="feature">
+          <div class="ftitle">Four visualizations</div>
+          <div class="fbody">Linear, twin orbits, radial wedges, LCM grid. Pick what your eyes track best.</div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="bar">
+      <h2>One-time purchase. No subscription.</h2>
+      <p class="body">Download free, use the full metronome forever. Pro upgrade unlocks the Gap Click trainer plus all future Pro features.</p>
+      <div class="pro-card">
+        <div class="price">
+          <div class="price-num">$9.99</div>
+          <div class="price-tag">Launch price · 60 days</div>
+        </div>
+        <div class="price-note">One-time purchase. Family sharing included. No subscription. No ads. No tracking. No dark patterns.</div>
+        <div class="standard">After launch promo: $14.99 standard price.</div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:sevebarr@gmail.com">Contact</a>
+      <div class="copy">&copy; 2026 Seve. Golden Tempo: Metronome Studio.</div>
+    </footer>
+  </main>
+</body>
+</html>
